@@ -118,14 +118,6 @@ const SITE_CONFIG = {
         primaryCTA:   { label: 'Ver Colecciones', href: '#mosaico' },
         secondaryCTA: { label: 'Cotizar Ahora',   href: '#personalizacion' },
       },
-      {
-        bg:      IMG.hero3,
-        title:   'Tu equipo,\ntu escudo,\ntu victoria.',
-        titleEm: 'tu escudo,',
-        sub:     'Pedidos listos en ~10 días hábiles · Envíos a todo el país',
-        primaryCTA:   { label: 'Pedir Equipación', href: '#mosaico' },
-        secondaryCTA: { label: 'Diseño Custom',    href: '#personalizacion' },
-      },
     ],
   },
 
