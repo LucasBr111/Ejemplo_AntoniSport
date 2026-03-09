@@ -1,61 +1,126 @@
 /**
- * catalog.js — CATÁLOGO EXTERNO DE PRODUCTOS
- * ─────────────────────────────────────────────────────────────────────────────
- * Archivo independiente del SITE_CONFIG principal.
- * Permite mantener y escalar el catálogo sin tocar la configuración general.
- * ─────────────────────────────────────────────────────────────────────────────
+ * ANTONI SPORT — CATALOG
+ * Productos destacados organizados por categoría.
+ * Las imágenes siguen el patrón de IMG constantes del site-config.
  */
 
-const BELLA_CATALOG = {
+const ANTONI_CATALOG = {
 
   meta: {
-    title: "La Colección",
-    subtitle: "Productos seleccionados por su calidad, textura y acabado impecable.",
-    eyebrow: "Productos Seleccionados"
+    eyebrow:  'Productos Destacados',
+    title:    'Productos',
+    titleEm:  'Destacados',
+    subtitle: 'Selección de nuestras prendas más vendidas. Todas personalizables.',
   },
 
-  featured: ["base-glow-satin", "matte-berry-bliss", "bronzer-terracotta"],
+  featured: ['casaca-nacional', 'polo-corporativo', 'campera-tactel', 'top-fem'],
 
   categories: [
 
-    /* ── PIEL ── */
+    /* ── EQUIPACIÓN COMPLETA ── */
     {
-      id: "piel",
-      name: "Piel",
-      description: "Texturas ligeras, acabado natural.",
+      id:   'completa',
+      name: 'Equipación Completa',
       products: [
-        { id: "base-glow-satin",   name: "Base Glow Satín",   price: "Gs. 85.000", img: "assets/img/base-1.jpg",  badge: "Nuevo",      description: "Cobertura media con efecto luminoso natural." },
-        { id: "corrector-velvet",  name: "Corrector Velvet",  price: "Gs. 45.000", img: "assets/img/base-2.jfif", badge: null,         description: "Fórmula cremosa de larga duración." },
-        { id: "primer-luminous",   name: "Primer Luminous",   price: "Gs. 50.000", img: "assets/img/base-3.jfif", badge: null,         description: "Prepara la piel y prolonga el maquillaje." },
-        { id: "bb-cream-radiance", name: "BB Cream Radiance", price: "Gs. 70.000", img: "assets/img/base-4.jfif", badge: "Top Venta",  description: "Hidratación + color en un solo paso." }
-      ]
+        {
+          id:    'casaca-nacional',
+          name:  'Casaca Nacional 2026',
+          sub:   'Sublimado · Tela Técnica Premium',
+          price: 'Gs. 185.000',
+          img:   'assets/img/equipo1.jpeg',
+          tag:   'Nuevo',
+          tagBg: '',
+        },
+        {
+          id:    'equipacion-completa-pro',
+          name:  'Equipación Completa Pro',
+          sub:   'Camiseta + Short + Medias',
+          price: 'Gs. 280.000',
+          img:   'assets/img/equipo2.jpeg',
+          tag:   'Más Vendido',
+          tagBg: '',
+        },
+      ],
     },
 
-    /* ── ACABADOS ── */
+    /* ── CAMISETAS ── */
     {
-      id: "acabados",
-      name: "Acabados",
-      description: "Sellado perfecto y sofisticado.",
+      id:   'camisetas',
+      name: 'Camisetas',
       products: [
-        { id: "polvo-translucido-hd",   name: "Polvo Translúcido HD",       price: "Gs. 60.000", img: "assets/img/polvo-1.jpg",  badge: null,       description: "Fija el maquillaje con acabado invisible." },
-        { id: "bronzer-terracotta",     name: "Bronzer Terracotta",         price: "Gs. 75.000", img: "assets/img/polvo-2.jfif", badge: "Favorito", description: "Bronceado cálido y escultural." },
-        { id: "iluminador-champagne",   name: "Iluminador Champagne Glow",  price: "Gs. 80.000", img: "assets/img/polvo-3.jfif", badge: null,       description: "Destellos dorados para la piel." },
-        { id: "blush-rose-petal",       name: "Blush Rosé Petal",           price: "Gs. 65.000", img: "assets/img/polvo-4.jfif", badge: null,       description: "Rubor suave con pigmentación perfecta." },
-        { id: "setting-spray",         name: "Setting Spray Fix & Glow",   price: "Gs. 55.000", img: "assets/img/polvo-5.jfif", badge: null,       description: "Fijador con acabado húmedo luminoso." },
-        { id: "primer-luminous-2",     name: "Primer Luminous Pro",         price: "Gs. 55.000", img: "assets/img/polvo-6.jfif", badge: null,       description: "Versión profesional del primer clásico." }
-      ]
+        {
+          id:    'camiseta-club-elite',
+          name:  'Camiseta Club Elite',
+          sub:   'Sublimado Full · Escudo Bordado',
+          price: 'Gs. 145.000',
+          img:   'assets/img/equipo3.jpeg',
+          tag:   null,
+          tagBg: '',
+        },
+        {
+          id:    'top-fem',
+          name:  'Top Fem Verde Musgo',
+          sub:   'Deportivo · Corte Ajustado',
+          price: 'Gs. 120.000',
+          img:   'assets/img/equipo2.jpeg',
+          tag:   'Femenino',
+          tagBg: '#4A7C59',
+        },
+      ],
     },
 
-    /* ── LABIOS ── */
+    /* ── EMPRESARIAL ── */
     {
-      id: "labios",
-      name: "Labios",
-      description: "Tonos que elevan tu estilo.",
+      id:   'empresarial',
+      name: 'Empresarial',
       products: [
-        { id: "matte-berry-bliss",  name: "Matte Berry Bliss",  price: "Gs. 40.000", img: "assets/img/p-labial-1.jpg", badge: "Más Vendido", description: "Rojo berry intenso, finish matte sedoso." },
-        { id: "gloss-rose-quartz",  name: "Gloss Rose Quartz",  price: "Gs. 35.000", img: "assets/img/p-labial-2.jpg", badge: null,          description: "Gloss cristalino con efecto voluminizador." }
-      ]
-    }
+        {
+          id:    'polo-corporativo',
+          name:  'Polo Corporativo Slim',
+          sub:   'Bordado · Varios Colores',
+          price: 'Gs. 98.000',
+          img:   'assets/img/equipo3.jpeg',
+          tag:   'Empresarial',
+          tagBg: '#333333',
+        },
+        {
+          id:    'remera-institucional',
+          name:  'Remera Institucional',
+          sub:   'Serigrafía o Sublimado',
+          price: 'Gs. 75.000',
+          img:   'assets/img/equipo4.jpeg',
+          tag:   null,
+          tagBg: '',
+        },
+      ],
+    },
 
-  ]
+    /* ── CAMPERAS ── */
+    {
+      id:   'camperas',
+      name: 'Camperas',
+      products: [
+        {
+          id:    'campera-tactel',
+          name:  'Campera Rompe Viento Tactel',
+          sub:   'Forro Polar · Muñeca Engomada',
+          price: 'Gs. 240.000',
+          img:   'assets/img/equipo1.jpeg',
+          tag:   'Tácticas',
+          tagBg: '#2196F3',
+        },
+        {
+          id:    'calza-corta',
+          name:  'Calza Corta Negra',
+          sub:   'Línea Stock · Entrega Inmediata',
+          price: 'Gs. 75.000',
+          img:   'assets/img/equipo4.jpeg',
+          tag:   'Stock',
+          tagBg: '',
+        },
+      ],
+    },
+
+  ],
+
 };
